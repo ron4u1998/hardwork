@@ -1,0 +1,38 @@
+{
+  "additional_special_tokens": null,
+  "cls_token": "[CLS]",
+  "cls_token_box": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "do_basic_tokenize": true,
+  "do_lower_case": true,
+  "mask_token": "[MASK]",
+  "model_max_length": 512,
+  "name_or_path": "microsoft/layoutlmv2-base-uncased",
+  "never_split": null,
+  "only_label_first_subword": true,
+  "pad_token": "[PAD]",
+  "pad_token_box": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "pad_token_label": -100,
+  "processor_class": "LayoutLMv2Processor",
+  "sep_token": "[SEP]",
+  "sep_token_box": [
+    1000,
+    1000,
+    1000,
+    1000
+  ],
+  "special_tokens_map_file": null,
+  "strip_accents": null,
+  "tokenize_chinese_chars": true,
+  "tokenizer_class": "LayoutLMv2Tokenizer",
+  "unk_token": "[UNK]"
+}

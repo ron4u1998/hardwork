@@ -1,0 +1,52 @@
+[
+    {
+        "SI No.": "1",
+        "Description of Goods and Services": "40X2 ST Flow Solder Socket",
+        "HSN\/SAC ": "8536",
+        "Quantity ": "400 Pcs",
+        "Rate ": "6.500",
+        "per ": "Pcs",
+        "Disc.% ": "",
+        "Amount ": "2,600.000"
+    },
+    {
+        "SI No.": "2",
+        "Description of Goods and Services": "Array Resistor - 9P",
+        "HSN\/SAC ": "8533",
+        "Quantity ": "2,000 Pcs",
+        "Rate ": "1.750",
+        "per ": "Pcs",
+        "Disc.% ": "",
+        "Amount ": "3,500.000"
+    },
+    {
+        "SI No.": "3",
+        "Description of Goods and Services": "10\/450V Caps (10x16) 105",
+        "HSN\/SAC ": "85322200",
+        "Quantity ": "1,000 Pcs",
+        "Rate ": "6.000",
+        "per ": "Pcs",
+        "Disc.% ": "",
+        "Amount ": "6,000.000"
+    },
+    {
+        "SI No.": "4",
+        "Description of Goods and Services": "470\/25V Caps (10x12) (L) 105",
+        "HSN\/SAC ": "85322200",
+        "Quantity ": "2,000 Pcs",
+        "Rate ": "2.650",
+        "per ": "Pcs",
+        "Disc.% ": "",
+        "Amount ": "5,300.000"
+    },
+    {
+        "SI No.": "5",
+        "Description of Goods and Services": "100\/50V Caps (8x11.5) 105",
+        "HSN\/SAC ": "85322200",
+        "Quantity ": "2,000 Pcs",
+        "Rate ": "2.750",
+        "per ": "Pcs",
+        "Disc.% ": "",
+        "Amount ": "5,500.000"
+    }
+]

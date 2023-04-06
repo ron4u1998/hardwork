@@ -1,0 +1,21 @@
+FROM python:3.8
+
+RUN mkdir /app
+
+WORKDIR /app
+
+ADD .  /app
+
+RUN python -m pip install -U pip
+
+RUN pip install torch==1.13.0
+
+RUN pip install mmcv-full==1.7.0 -f https://download.openmmlab.com/mmcv/dist/cpu/torch1.13/index.html
+
+RUN pip install -r requirements.txt
+
+RUN wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1WTwpJbZz1jrQNU5zwe9j4wQ9JbZr9zXi' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1WTwpJbZz1jrQNU5zwe9j4wQ9JbZr9zXi" -O /app/description.pth && rm -rf /tmp/cookies.txt
+
+COPY xml_flie/paddleocr.py /usr/local/lib/python3.8/site-packages/paddleocr/paddleocr.py
+
+CMD ["python" , "new_app.py"]

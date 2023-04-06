@@ -1,0 +1,13 @@
+<ENVELOPE>
+    <HEADER>
+        <TALLYREQUEST>Import Data</TALLYREQUEST>
+    </HEADER>
+        <BODY>
+            <IMPORTDATA>
+                <REQUESTDESC><REPORTNAME>All Masters</REPORTNAME>
+                </REQUESTDESC>
+                <REQUESTDATA>
+                <TALLYMESSAGE xmlns:UDF="TallyUDF"><LEDGER Action="Create"><NAME>'+led_name+'</NAME><PARENT>'+led_group
+                </PARENT><ADDRESS>'+led_address+'</ADDRESS><COUNTRYOFRESIDENCE>'+led_country+'</COUNTRYOFRESIDENCE>
+                <LEDSTATENAME>'+led_state+'</LEDSTATENAME><LEDGERMOBILE>'+led_mobile+'</LEDGERMOBILE><PARTYGSTIN>
+                led_gst+</PARTYGSTIN></LEDGER></TALLYMESSAGE></REQUESTDATA></IMPORTDATA></BODY></ENVELOPE>

@@ -1,0 +1,6 @@
+mmdet
+model/layoutlmv2_sam_ocr_bs4_e75_without_Add.pth
+model/layoutlmv2_sam_ocr.pth
+model/layoutlmv2-finetuned.pth
+samyak_table.pth
+description.pth

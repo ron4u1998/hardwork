@@ -1,0 +1,20 @@
+[
+    {
+        "SI No.": "1",
+        "Description of Goods and Services": "CS5532ASZ",
+        "HSN\/SAC": "85423100",
+        "Quantity": "264 Pcs",
+        "Rate": "325.00",
+        "per": "Pcs",
+        "Amount": "85,800.00"
+    },
+    {
+        "SI No.": "2",
+        "Description of Goods and Services": "TJ232ED",
+        "HSN\/SAC": "85423100",
+        "Quantity": "500 Pcs",
+        "Rate": "8.50",
+        "per": "Pcs",
+        "Amount": "4,250.00"
+    }
+]

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ENVELOPE>
+    <HEADER>
+        <TALLYREQUEST>Import Data</TALLYREQUEST>
+    </HEADER>
+    <BODY>
+        <IMPORTDATA>
+            <REQUESTDESC>
+                <REPORTNAME>Stock Item</REPORTNAME>
+                <STATICVARIABLES>
+                    <SVCURRENTCOMPANY>Test Company</SVCURRENTCOMPANY>
+                </STATICVARIABLES>
+            </REQUESTDESC>
+            <REQUESTDATA>
+                <TALLYMESSAGE xmlns:UDF="TallyUDF">
+                    <STOCKITEM NAME="Product 1" ACTION="Create">
+                        <NAME>40X2 ST Flow Solder Socket</NAME>
+                        <BATCHALLOCATIONS.LIST>
+                         <AMOUNT>2,600.000</AMOUNT>
+                        </BATCHALLOCATIONS.LIST>
+                    </STOCKITEM>
+                    <STOCKITEM NAME="Product 2" ACTION="Create">
+                        <NAME>Product 2</NAME>
+                        <PARENT>Stock Group 2</PARENT>
+                        <BATCHALLOCATIONS.LIST>
+                            <BATCHNAME>Batch 2</BATCHNAME>
+                            <AMOUNT>200</AMOUNT>
+                        </BATCHALLOCATIONS.LIST>
+                    </STOCKITEM>
+                </TALLYMESSAGE>
+            </REQUESTDATA>
+        </IMPORTDATA>
+    </BODY>
+</ENVELOPE>

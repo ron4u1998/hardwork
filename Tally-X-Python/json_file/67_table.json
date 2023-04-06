@@ -1,0 +1,65 @@
+{
+    "0": {
+        "SI No.": 1.0,
+        "Description": "Parts of Weighing Machinery:SMIT 3016\nWith Flame Proof Enc\nI\/pLoad Cell \nO\/p2 Relay \nPower 230 Vac\nSr No-2110088875 to 2110088877",
+        "HSN\/SAC ": "84239020\n\n\n\n\n",
+        "Quantity ": "3 Nos.\n\n\n\n\n",
+        "Rate ": "9,750.00\n\n\n\n\n",
+        "per ": "Nos\n\n\n\n\n",
+        "Amount": "29,250.0\n\n\n\n\n"
+    },
+    "1": {
+        "SI No.": 2.0,
+        "Description": "Parts of Weighing Machinery:SMIT 3015S|84239020\nWith Flame Proof Encloser\nSupply230 Vac\nInput Load Cell\nDigital Input Tsre Start\/stop\nOut Put 03 Relay2 Batching Alarm\nSr No-2110089008&2110089009",
+        "HSN\/SAC ": "84239020\n\n\n\n\n\n",
+        "Quantity ": "2 Nos.\n\n\n\n\n\n",
+        "Rate ": "2.10,000.00.\n\n\n\n\n\n",
+        "per ": "Nos\n\n\n\n\n\n",
+        "Amount": "20,000.0\n\n\n\n\n\n"
+    },
+    "2": {
+        "SI No.": 3.0,
+        "Description": "Parts of Weighing Machinery:SMIT 3016\nWith Flame Proof Enc\nI\/p Load Cell \nO\/p2 Relay \nPower 230 Vac\nSr No-2110088878 to 2110088880",
+        "HSN\/SAC ": "84239020\n\n\n\n\n",
+        "Quantity ": "3Nos.\n\n\n\n\n",
+        "Rate ": "9,750.00.\n\n\n\n\n",
+        "per ": "Nos\n\n\n\n\n",
+        "Amount": "29,250.0\n\n\n\n\n"
+    },
+    "3": {
+        "SI No.": null,
+        "Description": null,
+        "HSN\/SAC ": null,
+        "Quantity ": null,
+        "Rate ": null,
+        "per ": null,
+        "Amount": "78,500.0"
+    },
+    "4": {
+        "SI No.": null,
+        "Description": "STATEGST",
+        "HSN\/SAC ": null,
+        "Quantity ": null,
+        "Rate ": null,
+        "per ": null,
+        "Amount": "7,065.0"
+    },
+    "5": {
+        "SI No.": null,
+        "Description": "CENTRAL GST",
+        "HSN\/SAC ": null,
+        "Quantity ": null,
+        "Rate ": null,
+        "per ": null,
+        "Amount": "7,065.0"
+    },
+    "6": {
+        "SI No.": null,
+        "Description": "Total",
+        "HSN\/SAC ": null,
+        "Quantity ": "8 Nos.",
+        "Rate ": null,
+        "per ": null,
+        "Amount": "Rs.92.630."
+    }
+}

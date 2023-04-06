@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Invoice Text Extractor</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/min/dropzone.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+</head>
+
+<style>
+    .button {
+        background-color: #2196F3;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        background: #6c7af5;
+        border: none !important;
+        border-radius: 5px;
+        width: 100% !important;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .align-right {
+        text-align: right;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #e9e9e9;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .topnav a.active {
+        background-color: #2196F3;
+        color: white;
+    }
+
+    .topnav .search-container {
+        float: right;
+    }
+
+    .topnav input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        width: 900px;
+    }
+
+    .topnav .search-container button {
+        float: right;
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+        width: 100px;
+    }
+
+    .topnav .search-container button:hover {
+        background: #ccc;
+    }
+
+    @media screen and (max-width: 600px) {
+        .topnav .search-container {
+            float: none;
+        }
+
+        .topnav a,
+        .topnav input[type=text],
+        .topnav .search-container button {
+            float: none;
+            display: block;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 14px;
+        }
+
+        .topnav input[type=text] {
+            border: 1px solid #ccc;
+        }
+
+        .alert-warning {
+            padding: 12px;
+            border-radius: 3px;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            border: 2px solid darkred;
+            background-color: red;
+            color: white;
+        }
+        /* Dropdown Button */
+        .dropbtn {      
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Dropdown button on hover & focus */
+        .dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+        }
+
+        /* The search field */
+        #myInput {
+            box-sizing: border-box;
+            background-image: url('searchicon.png');
+            background-position: 14px 12px;
+            background-repeat: no-repeat;
+            font-size: 16px;
+            padding: 14px 20px 12px 45px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* The search field when it gets focus/clicked on */
+        #myInput:focus {outline: 3px solid #ddd;}
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+  position: relative;
+  display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  border: 1px solid #ddd;
+  z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        .show {display:block;}
+    }
+</style>
+
+<body>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-12 padding-left-0">
+            <div>
+                <div src="" class="right-side-img"></div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-12">
+            <div class="main-section">
+                <div class="logobanner"><img class="img-fluid" src="{{ url_for('static', filename='logo.png'  ) }} ">
+                </div>
+                <div class="right-section">
+                    <h3 class="banner1 login-heading login-heading-space">
+                        <span>Welcome To</span>
+                        <br>
+                        Samyak Data Extractor
+                    </h3>
+                    {% for category, message in get_flashed_messages(with_categories=True) %}
+                    <div class="alert alert-{{category}}">
+                        <a id="Amessage" class="close" href="{{ url_for('Registered') }}">×</a>
+                        <h3>
+                            <li>Warning: {{ message }}</li>
+                        </h3>
+                    </div>
+                    {% endfor %}
+
+                    <form action="UploadInvoice" class="dropzone", method="POST">
+                        <div class="col-md-6">
+                            <label>Select Company</label>
+                            <input type="text" list="Company_Name" id="final"/>
+                            <datalist id="Company_Name" name="Company_Name" data-live-search="true" title="Select Company Name" >
+                                {% for row in Company_Name %}
+                                <option value="{{row.brand_id}}">{{row.brand_name}}</option>
+                                {% endfor %}
+                            </datalist>
+                        </div>
+                        <div class="dz-message" data-dz-message><span> Click Here To Upload Your Invoice</span></div>
+                    </form>
+                    <div class="align-right">
+                        <a class="button" href="{{url_for('extract')}}" onclick="showLoader();">Extract</a>
+                    </div>
+                    
+                    <div id="loading">
+                        <div class="text-center">
+                            <img class="" href="" src="../static/003.gif" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/min/dropzone.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#final").selectpicker();
+
+            $("#New").selectpicker();
+
+            function load_data(category_id) {
+                // console.log(1);
+                $.ajax({
+                    url: "/Registered/InvoiceType",
+                    method: "POST",
+                    data: { category_id: category_id },
+                    dataType: "json",
+                    success: function (data) {
+                        // alert(category_id)
+                        // var html = "";
+                        // for (var count = 0; count < data.length; count++) {
+                        //     html += '<option value="' + data[count].name + '">' + data[count].name + "</option>";
+                        // }
+                        // if (type == "carData") {
+                        //     $("#final").html(html);
+                        //     $("#final").selectpicker("refresh");
+                        // } 
+                        // else {
+                        //     $("#Invoice_Type").html(html);
+                        //     $("#Invoice_Type").selectpicker("refresh");
+                        // }
+                    },
+                });
+            }
+            $(document).on("change", "#final", function () {
+                var category_id = $("#final").val();
+                // console.log(category_id);
+                load_data(category_id);
+            });
+        });
+    </script>
+</body>
+
+
+<script>
+    function showLoader() {
+        document.getElementById('loading').style.visibility = 'visible';
+    }
+// Strongly recommended: Hide loader after 20 seconds, even if the page hasn't finished loadingsetTimeout(hideLoader, 20 * 1000);
+</script>
+
+</html>

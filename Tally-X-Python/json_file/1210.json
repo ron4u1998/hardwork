@@ -1,0 +1,15 @@
+{
+    "INVOICE_NO": "1210/2122",
+    "INVOICE_DATE": "31-Jul-2021",
+    "DELIVERY_NOTE": "None",
+    "DELIVERY_DATE": "None",
+    "COMP_NAME": "IntraAction Electronics",
+    "COMP_ADD": "None",
+    "COMP_CIN": "None",
+    "COMP_GST": "24AACFI8730P1Z0",
+    "COMP_STATE": "Gujarat",
+    "COMP_STATE_CODE": "24",
+    "TOTAL": "8,314.00",
+    "TAXABLE_VALUE": "7,046.00",
+    "TAX_AMOUNT": "1,268.00"
+}
